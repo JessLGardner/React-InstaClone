@@ -31,22 +31,21 @@ const User = styled.div`
   }
 `;
 
-const PostContent = styled.div`
+const PostImage = styled.div`
   img{
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
   }
 `;
 
-const PostInfo = styled.div`
-  padding: 5px 16px;
+const PostCaption = styled.div`
+  font-family: sans-serif;
+  padding: 8px 20px;
 `;
 
-const PostActions = styled.div`
-  svg{
-    padding: 5px;
-  }
-`
+const Icons = styled.div`
+  padding: 5px 10px;
+`;
 
 class Post extends Component{
 
@@ -62,24 +61,29 @@ class Post extends Component{
         return `${prev}, ${curr.username}`;
       }
     },"");
+
     return(
       <PostDiv>
         <User>
           <img src={post.user.profile_pic} alt={post.user.username} />
           <span>{post.user.username}</span>
         </User>
-        <PostContent>
-          <img src={post.image.url} />
-        </PostContent>
-        <PostInfo>
+        <PostImage>
+          <img src={post.image.url} alt="" />
+        </PostImage>
+
+        <PostCaption>
           <p>{post.caption}</p>
-          <PostActions>
+
+          <Icons>
             <FaHeartO size={35} />
             <FaCommentO size={35} />
-          </PostActions>
+          </Icons>
+
           <p><strong>{likes}</strong> like this</p>
           {post.comments.map((comment,i) => <Comment key={i} comment={comment}/>)}
-        </PostInfo>
+        </PostCaption>
+
       </PostDiv>
     )
   }

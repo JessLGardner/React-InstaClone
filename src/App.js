@@ -4,6 +4,9 @@ import Navbar from './components/Navbar';
 
 class App extends Component {
   render() {
+    const style = {
+      backgroundColor: "rgba(249,249,249, 1)"
+    };
     return (
       <div>
         <Navbar />
