@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import { FaHeartO, FaCommentO } from 'react-icons/lib/fa'
+import styled from 'styled-components';
 
 class Post extends Component{
+
+
+
+
 
   render(){
     const { post } = this.props;
