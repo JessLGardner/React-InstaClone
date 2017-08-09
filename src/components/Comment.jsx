@@ -4,28 +4,32 @@ import styled from 'styled-components';
 
 
 
-const CommentContainer = styled.div`
+const CommentDiv = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  font-family: sans-serif;
   img{
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     border-radius: 100%;
   }
+  span{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 700;
+  }
 `;
-
 
 class Comment extends Component {
   render() {
     const {comment} = this.props;
     console.log(comment);
     return (
-      <div>
+      <CommentDiv>
         <img src={comment.profile_pic} alt=""/>
-        <p>
-          <strong>{comment.username}</strong>
+        <p><span>{comment.username}</span>
           {comment.text}</p>
-      </div>
+      </CommentDiv>
     );
   }
 }

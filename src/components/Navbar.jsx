@@ -31,7 +31,6 @@ const SearchStyle = styled.div`
   }
 `;
 
-
 const IconStyle = styled.div`
   width: 250px;
   display: flex;
