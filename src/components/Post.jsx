@@ -13,7 +13,7 @@ class Post extends Component{
           <p>{post.user.username}</p>
         </div>
         <div>
-          <img src={post.image.url} />
+          <img src={post.image.url} alt="" />
           <p>{post.caption}</p>
         </div>
         <div>

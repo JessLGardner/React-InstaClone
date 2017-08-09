@@ -6,7 +6,7 @@ class Comment extends Component {
     console.log(comment);
     return (
       <div>
-        <img src={comment.profile_pic}/>
+        <img src={comment.profile_pic} alt=""/>
         <p>
           <strong>{comment.username}</strong>
           {comment.text}</p>
